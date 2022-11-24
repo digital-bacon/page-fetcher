@@ -16,8 +16,9 @@ const writeHTMLDocument = (sourceCode, fileName, ...args) => {
     if (err) {
       console.error(err);
     }
-    const fileStats = fs.statSync(fileName);
-    const fileSize = fileStats.size;
+    // const fileStats = fs.statSync(fileName);
+    // const fileSize = fileStats.size;
+    const fileSize = sourceCode.length;
     const messageOut = `Downloaded and saved ${fileSize} bytes to ${pathWithName}`;
     console.log(messageOut);
   });
